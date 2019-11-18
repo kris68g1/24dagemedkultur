@@ -134,7 +134,9 @@ body {
 
 /* Logo left frame */
 
-
+.logo {
+    margin-top: 22vh;
+}
 
 .line {
     padding-top: 2px;
@@ -330,52 +332,12 @@ p {
 }
 
 
-.logo {
-    position: absolute;
-top: 5vh;
-bottom: 0;
-left: 0;
-right: 0.9vw;
-margin: auto;
-width: 98%;
-display: block;
-z-index: 1;
-}
-
-
-ul {
-    margin: 25vh 3vh;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: $blackish;
-    font-size: 2rem;
-    
-    
-}
-
-li {
-    display: inline;
-    list-style-type: none;
-}
-
-li span {
-    
-    display: inline;
-    margin: auto;
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-
-
-
 
 @media (min-width: 875px) {
 
     .events {
         left: -6.3vw;
         position: relative;
-        margin-top: 28vh;
     }
 
     .eventGrey {
@@ -399,11 +361,6 @@ li span {
     .frameLeft {
         right: -11vw;
         z-index: -1;
-    }
-
-    .logo {
-        right: -11vw;
-       width: 90%;
     }
 
     .frameRight {
@@ -456,7 +413,10 @@ li span {
 
     /* Logo left frame */
 
-  
+    .logo {
+        margin-top: 22vh;
+        width: 90vw;
+    }
 
     .line {
         padding: 1px 25vw;
