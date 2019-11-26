@@ -1,10 +1,9 @@
-/* Sign */
-/* Screen */
-/* Board */
+/* All colors except normal black & white */
 body {
-  margin: 0;
+  margin: 0 0 0 0;
 }
 
+/* The yellow wall */
 .wall {
   background-color: #E8BC59;
   margin: 0;
@@ -51,12 +50,12 @@ body {
           transform-origin: top left;
 }
 
-/* Sections */
+/* Sections in the yellow wall */
 .wallLeft,
 .wallMiddle,
 .wallRight {
   width: 100vw;
-  height: calc(100vh - 85px);
+  height: 100vh;
   scroll-snap-align: start;
   position: relative;
 }
@@ -77,30 +76,30 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: wallRight;
-  height: 300vh;
 }
 
+/* Yellow wall frames */
 .frameLeft,
 .frameMiddle,
 .frameRight {
   position: absolute;
-  top: 5vh;
+  top: 32%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
   bottom: 0;
   left: 0;
   right: 0.9vw;
   margin: auto;
-  width: 98%;
+  width: 95%;
   display: block;
   z-index: -1;
 }
 
+/* Top and bottom yellow wall graphics  */
 .rail {
-  margin-top: -14px;
-  margin-left: 0;
-  width: 300vw;
-  display: block;
-  top: 0;
   position: absolute;
+  top: -12px;
+  width: 300vw;
   z-index: 1;
 }
 
@@ -111,81 +110,60 @@ body {
   bottom: 0;
   margin: 0;
   margin-left: 0;
+  margin-bottom: -1px;
   padding: 0;
   z-index: 1;
 }
 
 /* Text */
-/* Logo left frame */
-.line {
-  padding-top: 2px;
-  background-color: #D94854;
-  width: 64.4vw;
-  margin: 4vh auto 5vh auto;
-}
-
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  color: #D94854;
-  text-align: center;
-  z-index: 1;
-  margin: 0 0.9vw 0 auto;
-}
-
-.twentyFour {
-  font-size: 50vw;
-  line-height: 0.5;
-}
-
-.dageMed {
-  font-size: 11.1vw;
-}
-
-.kultur {
-  font-size: 15.2vw;
-  line-height: 0.2;
-}
-
 /* Header middle frame */
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #000000;
   z-index: 1;
   margin: 0;
   margin-left: 0.1vw;
 }
 
-.h2_middle {
+.middle {
   position: absolute;
-  top: 26vh;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
 }
 
-.h2_right {
-  font-size: 1rem;
+.center {
+  text-align: center;
 }
 
-.h2_small {
+.small {
   font-size: 6.9vw;
   margin: 0;
   line-height: 1.2;
 }
 
-.h2_big {
+.big {
   font-size: 9.76vw;
   margin: 0;
   line-height: 1.2;
 }
 
+.white {
+  color: white;
+  margin: 10vh 0 0 0;
+}
+
+.black {
+  color: black;
+}
+
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  color: #000000;
   font-size: 8.18vw;
   text-align: center;
   z-index: 1;
@@ -197,16 +175,25 @@ h3 {
 h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #000000;
+  color: black;
   z-index: 1;
   margin: 0;
   margin-left: 0.1vw;
 }
 
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: black;
+  z-index: 1;
+  margin: 0;
+  margin-left: 0.1vw;
+  font-size: 2.5vw;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: #000000;
   font-size: 4.1vw;
   line-height: 2.2;
   text-align: left;
@@ -214,23 +201,103 @@ p {
   margin: 4vh 16vw 0 16vw;
 }
 
-.h2_right {
-  margin-top: 26vh;
+.p_white {
+  color: white;
+  margin: 5vh 4vw;
 }
 
 /* Event box's right frame */
-.eventGrey {
-  background: #F7F9FC;
-  margin-left: 12vw;
-  margin-right: 12vw;
-  margin-bottom: 0;
-  text-align: left;
+.frameEvents {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0;
 }
 
-.eventBlue {
-  background: #CAD4E8;
-  margin: 2vh 12vw 2vh 12vw;
-  text-align: left;
+.eventFrame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+
+.eventSnow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1vh;
+  cursor: pointer;
+}
+
+.datoFrame,
+.datoSnow {
+  line-height: 60px;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.datoFrame {
+  height: 60px;
+  width: 18vw;
+  padding: 0 0;
+  margin: auto 0 auto auto;
+}
+
+.datoSnow {
+  height: 60px;
+  width: 22vw;
+  padding: 0 0;
+  margin: auto 0 auto auto;
+}
+
+.beskrivelseFrame,
+.beskrivelseSnow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: black;
+  font-size: 3vw;
+}
+
+.beskrivelseFrame {
+  height: 60px;
+  width: 58vw;
+  margin: auto auto auto 0;
+  padding: 0 1vw 0 0;
+  font-size: 3vw;
+}
+
+.beskrivelseSnow {
+  height: 60px;
+  width: 72vw;
+  margin: auto auto auto 0;
+  padding: 0 1vw 0 0;
+  font-size: 3.7vw;
+}
+
+.light {
+  background-color: white;
+}
+
+.dark {
+  background-color: #CAD4E8;
 }
 
 /* Buttons right frame */
@@ -253,26 +320,65 @@ p {
 .btnContainer {
   text-align: center;
   display: inline;
+}
+
+.btnFrame {
   margin-left: 1.9vw;
   margin-right: 1.9vw;
 }
 
-.btnCall {
+.btnBottom {
+  text-align: center;
+  margin: auto auto 10vh auto;
+}
+
+.redBtn {
+  background: #A7292E;
+  -webkit-box-shadow: 0 6px #77181C;
+          box-shadow: 0 6px #77181C;
+  color: white;
+}
+
+.blueBtn {
+  background: #CAD4E8;
+  -webkit-box-shadow: 0 6px white;
+          box-shadow: 0 6px white;
+  color: black;
+}
+
+.redBtn, .blueBtn {
   border: none;
   margin: 10px 2px;
+  padding: 8px 12px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
   position: relative;
 }
 
-.program {
-  padding: 8px 12px;
-  background: #D94854;
-  -webkit-box-shadow: 0 6px #A3363F;
-          box-shadow: 0 6px #A3363F;
+.redBtn:hover {
+  -webkit-box-shadow: 0 4px #77181C;
+          box-shadow: 0 4px #77181C;
+  top: 2px;
+}
+
+.redBtn:active {
+  -webkit-box-shadow: 0 0 #77181C;
+          box-shadow: 0 0 #77181C;
+  top: 6px;
+}
+
+.blueBtn:hover {
+  -webkit-box-shadow: 0 4px white;
+          box-shadow: 0 4px white;
+  top: 2px;
+}
+
+.blueBtn:active {
+  -webkit-box-shadow: 0 0 white;
+          box-shadow: 0 0 white;
+  top: 6px;
 }
 
 .flag {
@@ -290,18 +396,6 @@ p {
   top: 0;
   bottom: 0;
   margin: auto;
-}
-
-.btnCall:hover {
-  -webkit-box-shadow: 0 4px #A3363F;
-          box-shadow: 0 4px #A3363F;
-  top: 2px;
-}
-
-.btnCall:active {
-  -webkit-box-shadow: 0 0 #A3363F;
-          box-shadow: 0 0 #A3363F;
-  top: 6px;
 }
 
 .flag:hover {
@@ -323,153 +417,1169 @@ p {
   top: 4px;
 }
 
-.logo {
+/* Logo left frame */
+.logos {
   position: absolute;
-  top: 5vh;
-  bottom: 0;
-  left: 0;
-  right: 0.9vw;
-  margin: auto;
+  top: 20%;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
   width: 98%;
-  display: block;
+}
+
+.logoBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -16vh;
+}
+
+.cphLogo {
+  margin-top: 1%;
+  width: 10%;
+  margin-left: 5vw;
+}
+
+/* Graffiti */
+.splat {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  height: 40vh;
+  z-index: -2;
+}
+
+.norrebro {
+  position: absolute;
+  bottom: 6vh;
+  left: 8vw;
+  height: 10vh;
+  z-index: -2;
+}
+
+.smiley {
+  position: absolute;
+  top: 16vh;
+  right: 0;
+  height: 30vh;
+  z-index: -2;
+}
+
+.heart {
+  position: absolute;
+  bottom: 7.2vh;
+  right: 0;
+  height: 16vh;
+  z-index: -2;
+}
+
+/* Snow Section */
+.column {
+  float: left;
+  width: 100%;
+}
+
+.row {
+  padding: 100vh 0 0 0;
+  background-color: #F7F9FC;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.snowBottom {
   z-index: 1;
-}
-
-ul {
-  margin: 25vh 3vh;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #000000;
-  font-size: 2rem;
-}
-
-.eventTop {
-  margin-top: 48%;
-}
-
-.eventTop, .event {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 2vh;
-}
-
-.dato {
-  grid-area: dato;
-  height: 60px;
-  line-height: 60px;
-  white-space: nowrap;
-  width: 18vw;
-  margin: auto 0 auto auto;
-  text-align: center;
-}
-
-.beskrivelse {
-  grid-area: beskrivelse;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 60px;
-  width: 58vw;
-  margin: auto auto auto 0;
-  padding-left: 0;
-  padding-right: 1vw;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #000000;
-  font-size: 3vw;
-}
-
-.light {
-  background-color: #ffffff;
-}
-
-.dark {
-  background-color: #CAD4E8;
-}
-
-.nav {
+  width: 100vw;
+  position: relative;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 10vh;
+  padding: 0;
   display: block;
+  overflow: hidden;
 }
 
-@media (min-width: 875px) {
-  .dato {
-    width: 6vw;
+.why {
+  background-color: #272727;
+  padding-bottom: 8vh;
+}
+
+.redish {
+  color: #A7292E;
+  text-decoration: none;
+}
+
+/* Galaxy S5 */
+@media (min-width: 360px) and (min-height: 640px) {
+  .logos {
+    top: 24%;
+    -webkit-transform: translateY(-24%);
+            transform: translateY(-24%);
+    width: 95%;
+    right: 1.2vw;
+    left: 1.2vw;
   }
-  .beskrivelse {
-    height: 100px;
-    width: 16vw;
-    margin: auto auto auto 0;
-    padding-left: 0vw;
-    padding-right: 1vw;
-    font-size: 1.2vw;
+  .logoBottom {
+    margin-top: -13vh;
   }
-  .eventTop {
-    margin-top: 50%;
+  .rail {
+    top: -20px;
   }
-  .eventTop, .event {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .middle {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
-  .desk {
+  .eventFrame {
     margin-bottom: 2vh;
+  }
+  .datoFrame {
+    height: 70px;
+    line-height: 70px;
+  }
+  .beskrivelseFrame {
+    height: 70px;
+  }
+  .datoSnow {
+    height: 70px;
+    line-height: 70px;
+  }
+  .beskrivelseSnow {
+    height: 70px;
+  }
+  p {
+    margin-top: 3vh;
+  }
+}
+
+/* Iphone X */
+@media (min-width: 375px) and (min-height: 812px) {
+  .logos {
+    top: 39%;
+    -webkit-transform: translateY(-36%);
+            transform: translateY(-36%);
+    width: 95%;
+    right: 2vw;
+    left: 2vw;
+  }
+  .middle {
+    top: 57.5%;
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
+  }
+  .logoBottom {
+    margin-top: -13vh;
+  }
+  .norrebro {
+    position: absolute;
+    bottom: 4vh;
+  }
+  .heart {
+    position: absolute;
+    bottom: 6vh;
+  }
+  .frameEvents {
+    top: 54%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .eventFrame {
+    margin-bottom: 1vh;
+  }
+  .datoFrame {
+    height: 75px;
+    line-height: 75px;
+  }
+  .beskrivelseFrame {
+    height: 75px;
+  }
+  p {
+    margin-top: 3vh;
+  }
+}
+
+/* Pixel 2 */
+@media (min-width: 411px) and (min-height: 731px) {
+  .logos {
+    top: 24%;
+    -webkit-transform: translateY(-24%);
+            transform: translateY(-24%);
+    width: 95%;
+    right: 1.2vw;
+    left: 1.2vw;
+  }
+  .middle {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .eventFrame {
+    margin-bottom: 2vh;
+  }
+  .datoFrame {
+    height: 80px;
+    line-height: 80px;
+  }
+  .beskrivelseFrame {
+    height: 80px;
+  }
+  .datoSnow {
+    height: 80px;
+    line-height: 80px;
+  }
+  .beskrivelseSnow {
+    height: 80px;
+  }
+  p {
+    margin-top: 3vh;
+  }
+}
+
+/* Pixel 2 XL */
+@media (min-width: 411px) and (min-height: 823px) {
+  .logos {
+    top: 32%;
+    -webkit-transform: translateY(-32%);
+            transform: translateY(-32%);
+    width: 95.5%;
+    right: 1.2vw;
+    left: 1.2vw;
+  }
+  .middle {
+    top: 54%;
+    -webkit-transform: translateY(-54%);
+            transform: translateY(-54%);
+  }
+  .eventFrame {
+    margin-bottom: 1vh;
+  }
+}
+
+@media (min-width: 414px) {
+  .logos {
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    width: 95.5%;
+    right: 1.2vw;
+    left: 1.2vw;
+  }
+  .middle {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .logoBottom {
+    margin-top: -13vh;
+  }
+  .norrebro {
+    position: absolute;
+    bottom: 4vh;
+  }
+  .heart {
+    position: absolute;
+    bottom: 6vh;
+  }
+  .eventFrame {
+    margin-bottom: 2vh;
+  }
+  .datoFrame {
+    height: 80px;
+    line-height: 80px;
+  }
+  .beskrivelseFrame {
+    height: 80px;
+  }
+  .datoSnow {
+    height: 80px;
+    line-height: 80px;
+  }
+  .beskrivelseSnow {
+    height: 80px;
+  }
+  p {
+    margin-top: 3vh;
+  }
+}
+
+@media (min-width: 300px) {
+  .rail {
+    top: -20px;
+  }
+  .logos {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .logoBottom {
+    margin-top: -10vh;
+  }
+  .udvalgFacebook {
+    width: 52%;
+  }
+  .cphLogo {
+    margin-left: 3.9vw;
+  }
+  .middle {
+    top: 62%;
+    -webkit-transform: translateY(-62%);
+            transform: translateY(-62%);
+  }
+  /* Event box's right frame */
+  .break {
+    display: none;
+  }
+  .frameEvents {
+    position: absolute;
+    top: 60%;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+  .eventFrame {
+    margin-bottom: 1vh;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 17px;
+  }
+  .redBtn {
+    font-size: 1.6rem;
+  }
+  .flag {
+    padding: 8px 4px;
+  }
+  .flagImg {
+    width: 2.75rem;
+  }
+  .norrebro {
+    bottom: 4vh;
+  }
+  .heart {
+    bottom: 4vh;
+  }
+}
+
+@media (min-width: 340px) {
+  .rail {
+    top: -20px;
+  }
+  .logos {
+    top: 46%;
+    -webkit-transform: translateY(-46%);
+            transform: translateY(-46%);
+  }
+  .middle {
+    top: 59%;
+    -webkit-transform: translateY(-59%);
+            transform: translateY(-59%);
+  }
+  .frameEvents {
+    top: 58%;
+    -webkit-transform: translateY(-58%);
+            transform: translateY(-58%);
+  }
+  .eventFrame {
+    margin-bottom: 2vh;
+  }
+}
+
+@media (min-width: 390px) {
+  .logos {
+    top: 39%;
+    -webkit-transform: translateY(-39%);
+            transform: translateY(-39%);
+    right: 1.5vw;
+    left: 1.5vw;
+  }
+  .middle {
+    top: 55.5%;
+    -webkit-transform: translateY(-55.5%);
+            transform: translateY(-55.5%);
+  }
+  .frameEvents {
+    top: 53.5%;
+    -webkit-transform: translateY(-53.5%);
+            transform: translateY(-53.5%);
+  }
+}
+
+@media (min-width: 430px) {
+  .logos {
+    top: 31%;
+    -webkit-transform: translateY(-31%);
+            transform: translateY(-31%);
+    right: 1.5vw;
+    left: 1.5vw;
+  }
+  .middle {
+    top: 52%;
+    -webkit-transform: translateY(-52%);
+            transform: translateY(-52%);
+  }
+  .frameEvents {
+    top: 51%;
+    -webkit-transform: translateY(-51%);
+            transform: translateY(-51%);
+  }
+}
+
+@media (min-width: 460px) {
+  .logos {
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    right: 1.5vw;
+    left: 1.5vw;
+  }
+  .middle {
+    top: 49%;
+    -webkit-transform: translateY(-49%);
+            transform: translateY(-49%);
+  }
+  .frameEvents {
+    top: 48%;
+    -webkit-transform: translateY(-48%);
+            transform: translateY(-48%);
+  }
+  .eventFrame {
+    margin-bottom: 3vh;
+  }
+}
+
+@media (min-width: 460px) {
+  .logos {
+    top: 10%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    right: 1.5vw;
+    left: 1.5vw;
+  }
+  .middle {
+    top: 47%;
+    -webkit-transform: translateY(-47%);
+            transform: translateY(-47%);
+  }
+  .frameEvents {
+    top: 46%;
+    -webkit-transform: translateY(-46%);
+            transform: translateY(-46%);
+  }
+}
+
+@media (min-width: 500px) {
+  .logos {
+    top: 39%;
+    -webkit-transform: translateY(-39%);
+            transform: translateY(-39%);
+    width: 70%;
+    right: 14vw;
+    left: 14vw;
+  }
+  .rail {
+    top: -20px;
   }
   .frameLeft,
   .frameMiddle,
   .frameRight {
-    width: 90%;
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
-  .frameLeft {
-    right: -11vw;
-    z-index: -1;
+  .udvalgFacebook {
+    width: 52%;
   }
-  .logo {
-    right: -11vw;
-    width: 90%;
+  .cphLogo {
+    margin-left: 3.9vw;
   }
+  .middle {
+    top: 56.5%;
+    -webkit-transform: translateY(-56.5%);
+            transform: translateY(-56.5%);
+  }
+  .small {
+    font-size: 5vw;
+  }
+  .big {
+    font-size: 7.1vw;
+  }
+  .big {
+    font-size: 7.1vw;
+  }
+  h3 {
+    font-size: 6vw;
+  }
+  h4 {
+    font-size: 3.5vw;
+  }
+  h5 {
+    font-size: 1.85vw;
+  }
+  p {
+    font-size: 3vw;
+    margin: 2vh 25vw 0 25vw;
+  }
+  /* Event box's right frame */
+  .break {
+    display: none;
+  }
+  .frameEvents {
+    position: absolute;
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .eventFrame {
+    margin-bottom: 1vh;
+  }
+  .datoFrame {
+    height: 75px;
+    width: 12vw;
+    line-height: 75px;
+  }
+  .datoSnow {
+    padding-top: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 75px;
+    line-height: 75px;
+    width: 12vw;
+  }
+  .beskrivelseFrame {
+    padding-left: 0.5vw;
+    padding-right: 0;
+    width: 42vw;
+    height: 75px;
+    font-size: 2.5vw;
+  }
+  .beskrivelseSnow {
+    padding-top: 0;
+    padding-right: 0.5vw;
+    height: 75px;
+    width: 83vw;
+    margin-right: 1.5vw;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 17px;
+  }
+  .redBtn {
+    font-size: 1.8rem;
+  }
+  .flag {
+    padding: 6px 2px;
+  }
+  .flagImg {
+    width: 2.8rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .rail {
+    top: -25px;
+  }
+  .logos {
+    top: 35%;
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
+  .middle {
+    top: 55%;
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
+  }
+  .datoFrame {
+    height: 80px;
+    line-height: 80px;
+  }
+  .datoSnow {
+    height: 80px;
+    line-height: 80px;
+  }
+  .beskrivelseFrame {
+    height: 80px;
+    font-size: 2.5vw;
+  }
+  .beskrivelseSnow {
+    height: 80px;
+  }
+}
+
+@media (min-width: 590px) {
+  .rail {
+    top: -30px;
+  }
+  .logos {
+    top: 32%;
+    -webkit-transform: translateY(-32%);
+            transform: translateY(-32%);
+  }
+  .middle {
+    top: 53.5%;
+    -webkit-transform: translateY(-53.5%);
+            transform: translateY(-53.5%);
+  }
+  .datoFrame {
+    height: 90px;
+    line-height: 90px;
+  }
+  .datoSnow {
+    height: 90px;
+    line-height: 90px;
+  }
+  .beskrivelseFrame {
+    height: 90px;
+    font-size: 2.5vw;
+  }
+  .beskrivelseSnow {
+    height: 90px;
+  }
+}
+
+@media (min-width: 640px) {
+  .rail {
+    top: -40px;
+  }
+  .logos {
+    top: 22%;
+    -webkit-transform: translateY(-22%);
+            transform: translateY(-22%);
+  }
+  .middle {
+    top: 60;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+  .logoBottom {
+    margin-top: -16vh;
+  }
+  .eventFrame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2vh;
+  }
+  .datoFrame {
+    height: 90px;
+    line-height: 90px;
+  }
+  .datoSnow {
+    height: 90px;
+    line-height: 90px;
+  }
+  .beskrivelseFrame {
+    height: 90px;
+    font-size: 2.5vw;
+  }
+  .beskrivelseSnow {
+    height: 90px;
+  }
+}
+
+@media (min-width: 641px) {
+  .frameLeft,
+  .frameMiddle,
   .frameRight {
-    left: -11.9vw;
+    width: 60%;
+    position: absolute;
+    top: 6%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .logos {
+    top: 27%;
+    -webkit-transform: translateY(-27%);
+            transform: translateY(-27%);
+    width: 62%;
+    right: 18vw;
+    left: 18vw;
+  }
+  .middle {
+    top: 52%;
+    -webkit-transform: translateY(-52%);
+            transform: translateY(-52%);
+  }
+  .logoBottom {
+    margin-top: -13vh;
+  }
+  .eventFrame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2vh;
+  }
+  .datoFrame {
+    height: 90px;
+    line-height: 90px;
+    width: 10vw;
+  }
+  .datoSnow {
+    height: 90px;
+    line-height: 90px;
+  }
+  .beskrivelseFrame {
+    height: 90px;
+    font-size: 2.5vw;
+    width: 38vw;
+  }
+  .beskrivelseSnow {
+    height: 90px;
+  }
+  .small {
+    font-size: 4.2vw;
+  }
+  .big {
+    font-size: 6vw;
+  }
+  h3 {
+    font-size: 5vw;
+  }
+  h5 {
+    font-size: 1.63vw;
+  }
+  p {
+    font-size: 2.6vw;
+    margin: 3vh 28vw 0 28vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 55%;
+    position: absolute;
+    top: 6%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .logos {
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    width: 55%;
+    right: 21.5vw;
+    left: 21.5vw;
+  }
+  .middle {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .logoBottom {
+    margin-top: -13vh;
+  }
+  .eventFrame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1vh;
+  }
+  .datoFrame {
+    height: 90px;
+    line-height: 90px;
+    width: 10vw;
+  }
+  .datoSnow {
+    height: 90px;
+    line-height: 90px;
+  }
+  .beskrivelseFrame {
+    height: 90px;
+    font-size: 2vw;
+    width: 34vw;
+  }
+  .beskrivelseSnow {
+    height: 90px;
+  }
+  .small {
+    font-size: 3.8vw;
+  }
+  .big {
+    font-size: 5.4vw;
+  }
+  h3 {
+    font-size: 4.5vw;
+  }
+  h5 {
+    font-size: 1.45vw;
+  }
+  .cphLogo {
+    margin-left: 3vw;
+  }
+  p {
+    font-size: 2.4vw;
+    margin: 3vh 30.1vw 0 30.1vw;
+  }
+}
+
+@media (min-width: 750px) {
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 50%;
+    position: absolute;
+    top: 6%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .logos {
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    width: 50%;
+    right: 24.1vw;
+    left: 24.1vw;
+  }
+  .middle {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .logoBottom {
+    margin-top: -13vh;
+  }
+  .eventFrame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1vh;
+  }
+  .datoFrame {
+    height: 90px;
+    line-height: 90px;
+    width: 9vw;
+  }
+  .datoSnow {
+    height: 90px;
+    line-height: 90px;
+  }
+  .beskrivelseFrame {
+    height: 90px;
+    font-size: 1.9vw;
+    width: 30.5vw;
+  }
+  .beskrivelseSnow {
+    height: 90px;
+  }
+  .small {
+    font-size: 3.5vw;
+  }
+  .big {
+    font-size: 5vw;
+  }
+  h3 {
+    font-size: 4.2vw;
+  }
+  h4 {
+    font-size: 3vw;
+  }
+  h5 {
+    font-size: 1.33vw;
+  }
+  .cphLogo {
+    margin-left: 2.6vw;
+  }
+  p {
+    font-size: 2.2vw;
+    margin: 3vh 31.5vw 0 31.5vw;
+  }
+}
+
+@media (min-width: 800px) {
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 45%;
+    position: absolute;
+    top: 6%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .logos {
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    width: 45%;
+    right: 26.6vw;
+    left: 26.6vw;
+  }
+  .middle {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .logoBottom {
+    margin-top: -13vh;
+  }
+  .eventFrame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1vh;
+  }
+  .datoFrame {
+    height: 90px;
+    line-height: 90px;
+    width: 8vw;
+  }
+  .datoSnow {
+    height: 90px;
+    line-height: 90px;
+  }
+  .beskrivelseFrame {
+    height: 90px;
+    font-size: 1.8vw;
+    width: 27vw;
+    padding-left: 1vw;
+    padding-right: 0;
+  }
+  .beskrivelseSnow {
+    height: 90px;
+  }
+  .small {
+    font-size: 3.2vw;
+  }
+  .big {
+    font-size: 4.5vw;
+  }
+  h3 {
+    font-size: 3.8vw;
+  }
+  h4 {
+    font-size: 3vw;
+  }
+  h5 {
+    font-size: 1.19vw;
+  }
+  .cphLogo {
+    margin-left: 2.5vw;
+  }
+  p {
+    font-size: 2vw;
+    margin: 3vh 33.5vw 0 33.5vw;
+  }
+}
+
+/* Ipad */
+@media (min-width: 768px) and (min-height: 1024px) {
+  .logos {
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    width: 70%;
+    right: 14vw;
+    left: 14vw;
   }
   .rail {
-    margin-top: -14px;
-    margin-left: 0;
-    width: 100vw;
-    display: block;
-    top: 0;
-    position: absolute;
-    z-index: 1;
+    top: -50px;
   }
-  .snowbank {
-    width: 100vw;
-    display: block;
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 70%;
     position: absolute;
-    bottom: 0;
-    margin: 0;
-    margin-left: -1;
-    padding: 0;
-    z-index: 1;
+    top: 10%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
-  /* Sections */
+  .udvalgFacebook {
+    width: 52%;
+  }
+  .cphLogo {
+    margin-left: 3.9vw;
+  }
+  .middle {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .small {
+    font-size: 5vw;
+  }
+  .big {
+    font-size: 7.1vw;
+  }
+  .big {
+    font-size: 7.1vw;
+  }
+  h3 {
+    font-size: 6vw;
+  }
+  h4 {
+    font-size: 3.5vw;
+  }
+  h5 {
+    font-size: 1.85vw;
+  }
+  p {
+    font-size: 3vw;
+    margin: 2vh 25vw 0 25vw;
+  }
+  /* Event box's right frame */
+  .break {
+    display: none;
+  }
+  .frameEvents {
+    position: absolute;
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .eventFrame {
+    margin-bottom: 1vh;
+  }
+  .datoFrame {
+    height: 120px;
+    width: 12vw;
+    line-height: 120px;
+  }
+  .datoSnow {
+    padding-top: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 120px;
+    line-height: 120px;
+    width: 12vw;
+  }
+  .beskrivelseFrame {
+    padding-left: 0.5vw;
+    padding-right: 0;
+    width: 42vw;
+    height: 120px;
+    font-size: 2.5vw;
+  }
+  .beskrivelseSnow {
+    padding-top: 0;
+    padding-right: 0.5vw;
+    height: 120px;
+    width: 83vw;
+    margin-right: 1.5vw;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 25px;
+  }
+  .redBtn {
+    font-size: 3rem;
+  }
+  .flag {
+    padding: 8px 1px;
+  }
+  .flagImg {
+    width: 4.5rem;
+  }
+}
+
+/* Ipad Pro */
+@media (min-width: 1024px) and (min-height: 1366px) {
+  .logos {
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    width: 70%;
+    right: 14vw;
+    left: 14vw;
+  }
+  .rail {
+    margin-top: -20px;
+  }
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .udvalgFacebook {
+    width: 52%;
+  }
+  .cphLogo {
+    margin-left: 3.9vw;
+  }
+  .middle {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .small {
+    font-size: 5vw;
+  }
+  .big {
+    font-size: 7.1vw;
+  }
+  h3 {
+    font-size: 6vw;
+  }
+  h4 {
+    font-size: 3.5vw;
+  }
+  h5 {
+    font-size: 1.85vw;
+  }
+  p {
+    font-size: 3vw;
+    margin: 2vh 25vw 0 25vw;
+  }
+  /* Event box's right frame */
+  .datoFrame {
+    height: 150px;
+    width: 12vw;
+    line-height: 150px;
+  }
+  .datoSnow {
+    padding-top: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 150px;
+    line-height: 150px;
+    width: 12vw;
+  }
+  .beskrivelseFrame {
+    padding-left: 0.5vw;
+    padding-right: 0;
+    width: 42vw;
+    height: 150px;
+    font-size: 2.5vw;
+  }
+  .beskrivelseSnow {
+    padding-top: 0;
+    padding-right: 0.5vw;
+    height: 150px;
+    width: 83vw;
+    margin-right: 1.5vw;
+  }
+  .desk {
+    margin-bottom: 3vh;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 25px;
+  }
+  .redBtn {
+    font-size: 3.5rem;
+  }
+  .flag {
+    padding: 8px 2px;
+  }
+  .flagImg {
+    width: 5.4rem;
+  }
+  .heart {
+    bottom: 10vh;
+  }
+}
+
+@media (min-width: 855px) {
+  /* Sections in the yellow wall */
   .wrapper {
     width: 100vw;
   }
@@ -482,46 +1592,55 @@ ul {
   .wallRight {
     width: 33.33vw;
   }
-  /* Text */
-  /* Logo left frame */
-  .line {
-    padding: 1px 25vw;
-    background-color: #D94854;
-    width: 1vw;
-    margin: 4vh auto 5vh auto;
+  /* Yellow wall frames */
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 90%;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    color: #D94854;
-    text-align: center;
+  .frameLeft {
+    right: -11vw;
+    z-index: -1;
+  }
+  .frameRight {
+    left: -11.9vw;
+  }
+  /* Top and bottom yellow wall graphics  */
+  .rail {
+    width: 100vw;
+    top: -10px;
+  }
+  .snowbank {
+    width: 100vw;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    margin-left: -1;
+    margin-bottom: -1px;
+    padding: 0;
     z-index: 1;
-    margin: 0 auto 0 20vw;
   }
-  .twentyFour {
-    font-size: 15vw;
-    line-height: 0.5;
-  }
-  .dageMed {
-    font-size: 5.1vw;
-  }
-  .kultur {
-    font-size: 6vw;
-    line-height: 0.2;
-  }
+  /* Text */
   /* Header middle frame */
-  .h2_middle {
-    top: 27vh;
-  }
   h2 {
     margin-left: -1vw;
   }
-  .h2_small {
+  .middle {
+    top: 61%;
+    -webkit-transform: translateY(-61%);
+            transform: translateY(-61%);
+  }
+  .small {
     font-size: 2.1vw;
     margin: 0;
     line-height: 1.38;
   }
-  .h2_big {
+  .big {
     font-size: 2.94vw;
     margin: 0;
     line-height: 1.3;
@@ -530,17 +1649,519 @@ ul {
     font-size: 2.47vw;
     margin-left: -0.9vw;
   }
+  h4 {
+    font-size: 1.4vw;
+  }
+  h5 {
+    font-size: 0.75vw;
+  }
   p {
     font-size: 1.29vw;
     line-height: 2;
     margin: 3vh 6vw 0 6vw;
   }
-  .buttons {
-    margin-left: -12vw;
+  /* Event box's right frame */
+  .frameEvents {
+    top: 54%;
+    -webkit-transform: translateY(-54%);
+            transform: translateY(-54%);
+    left: -12.4vw;
+  }
+  .eventFrame {
+    margin-bottom: 0.5vh;
+  }
+  .datoFrame,
+  .datoSnow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .datoFrame {
+    height: 55px;
+    width: 4vw;
+    line-height: 55px;
+  }
+  .datoSnow {
+    padding-top: 0.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 70px;
+    width: 6vw;
+  }
+  .beskrivelseFrame,
+  .beskrivelseSnow {
+    font-size: 1vw;
+  }
+  .beskrivelseFrame {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    width: 19vw;
+    height: 55px;
+  }
+  .beskrivelseSnow {
+    padding-top: 0.5vh;
+    padding-right: 1vw;
+    height: 70px;
+    width: 26vw;
+    margin-right: 1.5vw;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 15px;
   }
   .btnContainer {
     margin-left: 1vw;
     margin-right: 1vw;
+  }
+  .redBtn {
+    font-size: 1.3rem;
+  }
+  .flag {
+    padding: 8px 5px;
+  }
+  .flagImg {
+    width: 2.45rem;
+  }
+  .break {
+    display: none;
+  }
+  .p_white {
+    color: white;
+    margin: 5vh 20vw;
+  }
+  .why {
+    background-color: #272727;
+    padding-bottom: 8vh;
+    margin: 0;
+  }
+  .column {
+    width: 33.33%;
+  }
+  .row {
+    padding: 100vh 8vw 0 8vw;
+    background-color: #F7F9FC;
+  }
+  .desk {
+    margin-bottom: 0.5vh;
+  }
+  /* Logo left frame */
+  .logos {
+    position: absolute;
+    top: 46%;
+    -webkit-transform: translateY(-46%);
+            transform: translateY(-46%);
+    width: 90%;
+    right: -3.65vw;
+    left: 7vw;
+  }
+  .logoBottom {
+    margin-top: -10vh;
+  }
+  .cphLogo {
+    margin-top: 1%;
+    width: 10%;
+    margin-left: 2vw;
+  }
+  .udvalgFacebook {
+    width: 50%;
+  }
+  .heart {
+    bottom: 4vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Sections in the yellow wall */
+  /* Top and bottom yellow wall graphics  */
+  .rail {
+    width: 100vw;
+    top: -10px;
+  }
+  .snowbank {
+    width: 100vw;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    margin-left: -1;
+    margin-bottom: -1px;
+    padding: 0;
+    z-index: 1;
+  }
+  /* Text */
+  /* Header middle frame */
+  h2 {
+    margin-left: -1vw;
+  }
+  .middle {
+    top: 58%;
+    -webkit-transform: translateY(-58%);
+            transform: translateY(-58%);
+  }
+  .small {
+    font-size: 2.1vw;
+    margin: 0;
+    line-height: 1.38;
+  }
+  .big {
+    font-size: 2.94vw;
+    margin: 0;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 2.47vw;
+    margin-left: -0.9vw;
+  }
+  h4 {
+    font-size: 1.4vw;
+  }
+  h5 {
+    font-size: 0.75vw;
+  }
+  p {
+    font-size: 1.29vw;
+    line-height: 2;
+    margin: 3vh 6vw 0 6vw;
+  }
+  /* Event box's right frame */
+  .frameEvents {
+    top: 52%;
+    -webkit-transform: translateY(-52%);
+            transform: translateY(-52%);
+    left: -12.4vw;
+  }
+  .eventFrame {
+    margin-bottom: 2vh;
+  }
+  .datoFrame,
+  .datoSnow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .datoFrame {
+    height: 55px;
+    width: 4vw;
+    line-height: 55px;
+  }
+  .datoSnow {
+    padding-top: 0.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 70px;
+    width: 6vw;
+  }
+  .beskrivelseFrame,
+  .beskrivelseSnow {
+    font-size: 1vw;
+  }
+  .beskrivelseFrame {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    width: 19vw;
+    height: 55px;
+  }
+  .beskrivelseSnow {
+    padding-top: 0.5vh;
+    padding-right: 1vw;
+    height: 70px;
+    width: 26vw;
+    margin-right: 1.5vw;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 15px;
+  }
+  .btnContainer {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .redBtn {
+    font-size: 1.3rem;
+  }
+  .flag {
+    padding: 8px 5px;
+  }
+  .flagImg {
+    width: 2.45rem;
+  }
+  .break {
+    display: none;
+  }
+  .p_white {
+    color: white;
+    margin: 5vh 20vw;
+  }
+  .why {
+    background-color: #272727;
+    padding-bottom: 8vh;
+    margin: 0;
+  }
+  .column {
+    width: 33.33%;
+  }
+  .row {
+    padding: 100vh 8vw 0 8vw;
+    background-color: #F7F9FC;
+  }
+  .desk {
+    margin-bottom: 1vh;
+  }
+  /* Logo left frame */
+  .logos {
+    position: absolute;
+    top: 41.5%;
+    -webkit-transform: translateY(-41.5%);
+            transform: translateY(-41.5%);
+    width: 90%;
+    right: -3.65vw;
+    left: 7vw;
+  }
+  .logoBottom {
+    margin-top: -10vh;
+  }
+  .cphLogo {
+    margin-top: 1%;
+    width: 10%;
+    margin-left: 2vw;
+  }
+  .udvalgFacebook {
+    width: 50%;
+  }
+  .heart {
+    bottom: 4vh;
+  }
+}
+
+@media (min-width: 1150px) {
+  .logos {
+    top: 39%;
+    -webkit-transform: translateY(-39%);
+            transform: translateY(-39%);
+  }
+  .middle {
+    top: 56%;
+    -webkit-transform: translateY(-56%);
+            transform: translateY(-56%);
+  }
+  .frameEvents {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .datoFrame {
+    height: 70px;
+  }
+  .beskrivelseFrame {
+    height: 70px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Sections in the yellow wall */
+  .wrapper {
+    width: 100vw;
+  }
+  .wallLeft {
+    width: 33.33vw;
+  }
+  .wallMiddle {
+    width: 33.33vw;
+  }
+  .wallRight {
+    width: 33.33vw;
+  }
+  /* Yellow wall frames */
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 90%;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .frameLeft {
+    right: -11vw;
+    z-index: -1;
+  }
+  .frameRight {
+    left: -11.9vw;
+  }
+  /* Top and bottom yellow wall graphics  */
+  .rail {
+    position: absolute;
+    top: -20px;
+    width: 100vw;
+    z-index: 1;
+  }
+  .snowbank {
+    width: 100vw;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    margin-left: -1;
+    margin-bottom: -1px;
+    padding: 0;
+    z-index: 1;
+  }
+  /* Text */
+  /* Header middle frame */
+  h2 {
+    margin-left: -1vw;
+  }
+  .middle {
+    top: 51%;
+    -webkit-transform: translateY(-51%);
+            transform: translateY(-51%);
+  }
+  .small {
+    font-size: 2.1vw;
+    margin: 0;
+    line-height: 1.38;
+  }
+  .big {
+    font-size: 2.94vw;
+    margin: 0;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 2.47vw;
+    margin-left: -0.9vw;
+  }
+  h4 {
+    font-size: 1.4vw;
+  }
+  h5 {
+    font-size: 0.75vw;
+  }
+  p {
+    font-size: 1.29vw;
+    line-height: 2;
+    margin: 3vh 6vw 0 6vw;
+  }
+  /* Event box's right frame */
+  .frameEvents {
+    top: 51.5%;
+    -webkit-transform: translateY(-51.5%);
+            transform: translateY(-51.5%);
+    left: -12.4vw;
+  }
+  .eventFrame {
+    margin-bottom: 0.5vh;
+  }
+  .datoFrame,
+  .datoSnow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .datoFrame {
+    height: 95px;
+    width: 4vw;
+  }
+  .datoSnow {
+    padding-top: 0.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 70px;
+    width: 6vw;
+  }
+  .beskrivelseFrame,
+  .beskrivelseSnow {
+    font-size: 1vw;
+  }
+  .beskrivelseFrame {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    width: 19vw;
+    height: 95px;
+  }
+  .beskrivelseSnow {
+    padding-top: 0.5vh;
+    padding-right: 1vw;
+    height: 70px;
+    width: 26vw;
+    margin-right: 1.5vw;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 15px;
+  }
+  .btnContainer {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .redBtn {
+    font-size: 1.6rem;
+  }
+  .flag {
+    padding: 8px 5px;
+  }
+  .flagImg {
+    width: 2.9rem;
+  }
+  .break {
+    display: none;
+  }
+  .p_white {
+    color: white;
+    margin: 5vh 20vw;
+  }
+  .why {
+    background-color: #272727;
+    padding-bottom: 8vh;
+    margin: 0;
+  }
+  .column {
+    width: 33.33%;
+  }
+  .row {
+    padding: 100vh 8vw 0 8vw;
+    background-color: #F7F9FC;
+  }
+  .desk {
+    margin-bottom: 2vh;
+  }
+  /* Logo left frame */
+  .logos {
+    position: absolute;
+    top: 24%;
+    -webkit-transform: translateY(-24%);
+            transform: translateY(-24%);
+    width: 90%;
+    right: -3.65vw;
+    left: 7vw;
+  }
+  .logoBottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: -16vh;
+  }
+  .cphLogo {
+    margin-top: 1%;
+    width: 10%;
+    margin-left: 2vw;
+  }
+  .udvalgFacebook {
+    width: 50%;
+  }
+  .heart {
+    bottom: 7vh;
   }
 }
 /*# sourceMappingURL=general.css.map */
