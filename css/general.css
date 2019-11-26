@@ -514,6 +514,389 @@ p {
   text-decoration: none;
 }
 
+.snow1 {
+  background: white;
+  border-radius: 100%;
+  padding: 3px;
+  -webkit-box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+          box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+}
+
+.snow2 {
+  background: white;
+  border-radius: 100%;
+  padding: 4px;
+  -webkit-box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+          box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+}
+
+.snow3 {
+  background: white;
+  border-radius: 100%;
+  padding: 5px;
+  -webkit-box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+          box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+}
+
+.snow4 {
+  background: white;
+  border-radius: 100%;
+  padding: 2px;
+  -webkit-box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+          box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+}
+
+.snow5 {
+  background: white;
+  border-radius: 100%;
+  padding: 5px;
+  -webkit-box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+          box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+}
+
+.snow6 {
+  background: white;
+  border-radius: 100%;
+  padding: 5px;
+  -webkit-box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+          box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+}
+
+.snow7 {
+  background: white;
+  border-radius: 100%;
+  padding: 5px;
+  -webkit-box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+          box-shadow: -2px 2px 2px rgba(213, 216, 220, 0.6);
+}
+
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes snowflakes-shake {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes snowflakes-shake {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 6s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 6s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, .5s;
+  animation-delay: 6s, .5s;
+}
+
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+
+.snowflake:nth-of-type(10) {
+  left: 95%;
+  -webkit-animation-delay: 2s, 1s;
+  animation-delay: 2s, 1s;
+}
+
+.snowflake:nth-of-type(11) {
+  left: 15%;
+  -webkit-animation-delay: 2.3s, 2.5s;
+  animation-delay: 2.3s, 2.5s;
+}
+
+.snowflake:nth-of-type(12) {
+  left: 5%;
+  -webkit-animation-delay: 4s, 5s;
+  animation-delay: 4s, 5s;
+}
+
+.snowflake:nth-of-type(13) {
+  left: 50%;
+  -webkit-animation-delay: 3.3s, 4.5s;
+  animation-delay: 3.3s, 4.5s;
+}
+
+.snowflake:nth-of-type(14) {
+  left: 80%;
+  -webkit-animation-delay: 2.6s, 4.2s;
+  animation-delay: 2.6s, 4.2s;
+}
+
+.snowflake:nth-of-type(15) {
+  left: 66%;
+  -webkit-animation-delay: 6.2s, 6.1s;
+  animation-delay: 6.2s, 6.1s;
+}
+
+.snowflake:nth-of-type(16) {
+  left: 8%;
+  -webkit-animation-delay: 7.5s, 6.5s;
+  animation-delay: 7.5s, 6.5s;
+}
+
+.snowflake:nth-of-type(17) {
+  left: 2%;
+  -webkit-animation-delay: 9s, 7.2s;
+  animation-delay: 9s, 7.2s;
+}
+
+.snowflake:nth-of-type(18) {
+  left: 40%;
+  -webkit-animation-delay: 8.5s, 7.7s;
+  animation-delay: 8.5s, 7.7s;
+}
+
+.snowflake:nth-of-type(19) {
+  left: 88%;
+  -webkit-animation-delay: 8.1s, 4.2s;
+  animation-delay: 8.1s, 4.2s;
+}
+
+.snowflake:nth-of-type(20) {
+  left: 83%;
+  -webkit-animation-delay: 6.8s, 5.1s;
+  animation-delay: 6.8s, 5.1s;
+}
+
+.snowflake:nth-of-type(21) {
+  left: 23.6%;
+  -webkit-animation-delay: 3.3s, 5.2s;
+  animation-delay: 3.3s, 5.2s;
+}
+
+.snowflake:nth-of-type(22) {
+  left: 82.6%;
+  -webkit-animation-delay: 2.5s, 8.1s;
+  animation-delay: 2.5s, 8.1s;
+}
+
+@media (min-width: 300px) {
+  .rail {
+    top: -20px;
+  }
+  .logos {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .logoBottom {
+    margin-top: -10vh;
+  }
+  .udvalgFacebook {
+    width: 52%;
+  }
+  .cphLogo {
+    margin-left: 3.9vw;
+  }
+  .middle {
+    top: 62%;
+    -webkit-transform: translateY(-62%);
+            transform: translateY(-62%);
+  }
+  /* Event box's right frame */
+  .break {
+    display: none;
+  }
+  .frameEvents {
+    position: absolute;
+    top: 60%;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+  .eventFrame {
+    margin-bottom: 1vh;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 17px;
+  }
+  .redBtn {
+    font-size: 1.6rem;
+  }
+  .flag {
+    padding: 8px 4px;
+  }
+  .flagImg {
+    width: 2.75rem;
+  }
+  .norrebro {
+    bottom: 4vh;
+  }
+  .heart {
+    bottom: 4vh;
+  }
+}
+
+/* Galaxy S5 */
+@media (min-width: 320px) and (min-height: 568px) {
+  .logos {
+    top: 24%;
+    -webkit-transform: translateY(-24%);
+            transform: translateY(-24%);
+    width: 95%;
+    right: 1.2vw;
+    left: 1.2vw;
+  }
+  .logoBottom {
+    margin-top: -13vh;
+  }
+  .rail {
+    top: -20px;
+  }
+  .middle {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .frameEvents {
+    top: 52%;
+    -webkit-transform: translateY(-52%);
+            transform: translateY(-52%);
+  }
+  .eventFrame {
+    margin-bottom: 2vh;
+  }
+}
+
+@media (min-width: 340px) {
+  .rail {
+    top: -20px;
+  }
+  .logos {
+    top: 46%;
+    -webkit-transform: translateY(-46%);
+            transform: translateY(-46%);
+  }
+  .middle {
+    top: 59%;
+    -webkit-transform: translateY(-59%);
+            transform: translateY(-59%);
+  }
+  .frameEvents {
+    top: 58%;
+    -webkit-transform: translateY(-58%);
+            transform: translateY(-58%);
+  }
+  .eventFrame {
+    margin-bottom: 2vh;
+  }
+}
+
 /* Galaxy S5 */
 @media (min-width: 360px) and (min-height: 640px) {
   .logos {
@@ -600,6 +983,26 @@ p {
   }
   p {
     margin-top: 3vh;
+  }
+}
+
+@media (min-width: 390px) {
+  .logos {
+    top: 39%;
+    -webkit-transform: translateY(-39%);
+            transform: translateY(-39%);
+    right: 1.5vw;
+    left: 1.5vw;
+  }
+  .middle {
+    top: 55.5%;
+    -webkit-transform: translateY(-55.5%);
+            transform: translateY(-55.5%);
+  }
+  .frameEvents {
+    top: 53.5%;
+    -webkit-transform: translateY(-53.5%);
+            transform: translateY(-53.5%);
   }
 }
 
@@ -704,107 +1107,6 @@ p {
   }
   p {
     margin-top: 3vh;
-  }
-}
-
-@media (min-width: 300px) {
-  .rail {
-    top: -20px;
-  }
-  .logos {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-  .logoBottom {
-    margin-top: -10vh;
-  }
-  .udvalgFacebook {
-    width: 52%;
-  }
-  .cphLogo {
-    margin-left: 3.9vw;
-  }
-  .middle {
-    top: 62%;
-    -webkit-transform: translateY(-62%);
-            transform: translateY(-62%);
-  }
-  /* Event box's right frame */
-  .break {
-    display: none;
-  }
-  .frameEvents {
-    position: absolute;
-    top: 60%;
-    -webkit-transform: translateY(-60%);
-            transform: translateY(-60%);
-  }
-  .eventFrame {
-    margin-bottom: 1vh;
-  }
-  /* Buttons right frame */
-  .btn {
-    border-radius: 17px;
-  }
-  .redBtn {
-    font-size: 1.6rem;
-  }
-  .flag {
-    padding: 8px 4px;
-  }
-  .flagImg {
-    width: 2.75rem;
-  }
-  .norrebro {
-    bottom: 4vh;
-  }
-  .heart {
-    bottom: 4vh;
-  }
-}
-
-@media (min-width: 340px) {
-  .rail {
-    top: -20px;
-  }
-  .logos {
-    top: 46%;
-    -webkit-transform: translateY(-46%);
-            transform: translateY(-46%);
-  }
-  .middle {
-    top: 59%;
-    -webkit-transform: translateY(-59%);
-            transform: translateY(-59%);
-  }
-  .frameEvents {
-    top: 58%;
-    -webkit-transform: translateY(-58%);
-            transform: translateY(-58%);
-  }
-  .eventFrame {
-    margin-bottom: 2vh;
-  }
-}
-
-@media (min-width: 390px) {
-  .logos {
-    top: 39%;
-    -webkit-transform: translateY(-39%);
-            transform: translateY(-39%);
-    right: 1.5vw;
-    left: 1.5vw;
-  }
-  .middle {
-    top: 55.5%;
-    -webkit-transform: translateY(-55.5%);
-            transform: translateY(-55.5%);
-  }
-  .frameEvents {
-    top: 53.5%;
-    -webkit-transform: translateY(-53.5%);
-            transform: translateY(-53.5%);
   }
 }
 
@@ -1477,107 +1779,6 @@ p {
   }
 }
 
-/* Ipad Pro */
-@media (min-width: 1024px) and (min-height: 1366px) {
-  .logos {
-    top: 30%;
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-    width: 70%;
-    right: 14vw;
-    left: 14vw;
-  }
-  .rail {
-    margin-top: -20px;
-  }
-  .frameLeft,
-  .frameMiddle,
-  .frameRight {
-    width: 70%;
-    position: absolute;
-    top: 10%;
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
-  }
-  .udvalgFacebook {
-    width: 52%;
-  }
-  .cphLogo {
-    margin-left: 3.9vw;
-  }
-  .middle {
-    top: 53%;
-    -webkit-transform: translateY(-53%);
-            transform: translateY(-53%);
-  }
-  .small {
-    font-size: 5vw;
-  }
-  .big {
-    font-size: 7.1vw;
-  }
-  h3 {
-    font-size: 6vw;
-  }
-  h4 {
-    font-size: 3.5vw;
-  }
-  h5 {
-    font-size: 1.85vw;
-  }
-  p {
-    font-size: 3vw;
-    margin: 2vh 25vw 0 25vw;
-  }
-  /* Event box's right frame */
-  .datoFrame {
-    height: 150px;
-    width: 12vw;
-    line-height: 150px;
-  }
-  .datoSnow {
-    padding-top: 0;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    height: 150px;
-    line-height: 150px;
-    width: 12vw;
-  }
-  .beskrivelseFrame {
-    padding-left: 0.5vw;
-    padding-right: 0;
-    width: 42vw;
-    height: 150px;
-    font-size: 2.5vw;
-  }
-  .beskrivelseSnow {
-    padding-top: 0;
-    padding-right: 0.5vw;
-    height: 150px;
-    width: 83vw;
-    margin-right: 1.5vw;
-  }
-  .desk {
-    margin-bottom: 3vh;
-  }
-  /* Buttons right frame */
-  .btn {
-    border-radius: 25px;
-  }
-  .redBtn {
-    font-size: 3.5rem;
-  }
-  .flag {
-    padding: 8px 2px;
-  }
-  .flagImg {
-    width: 5.4rem;
-  }
-  .heart {
-    bottom: 10vh;
-  }
-}
-
 @media (min-width: 855px) {
   /* Sections in the yellow wall */
   .wrapper {
@@ -1773,12 +1974,142 @@ p {
   }
 }
 
+/* Ipad Pro */
+@media (min-width: 1024px) and (min-height: 1366px) {
+  .wrapper {
+    width: 300vw;
+  }
+  .wallLeft {
+    width: 100vw;
+  }
+  .wallMiddle {
+    width: 100vw;
+  }
+  .wallRight {
+    width: 100vw;
+  }
+  .rail {
+    top: -20px;
+    width: 300vw;
+  }
+  .snowbank {
+    width: 300vw;
+  }
+  .logos {
+    top: 29%;
+    -webkit-transform: translateY(-29%);
+            transform: translateY(-29%);
+    width: 71%;
+    right: 14vw;
+    left: 14vw;
+  }
+  .rail {
+    margin-top: -20px;
+  }
+  .frameLeft,
+  .frameMiddle,
+  .frameRight {
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .frameLeft,
+  .frameRight {
+    right: 0;
+    left: 0;
+  }
+  .frameEvents {
+    left: 0;
+  }
+  .udvalgFacebook {
+    width: 52%;
+  }
+  .cphLogo {
+    margin-left: 3.9vw;
+  }
+  .middle {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  .small {
+    font-size: 5vw;
+  }
+  .big {
+    font-size: 7.1vw;
+  }
+  h3 {
+    font-size: 6vw;
+  }
+  h4 {
+    font-size: 3.5vw;
+  }
+  h5 {
+    font-size: 1.85vw;
+  }
+  p {
+    font-size: 3vw;
+    margin: 2vh 25vw 0 25vw;
+  }
+  /* Event box's right frame */
+  .datoFrame {
+    height: 150px;
+    width: 12vw;
+    line-height: 150px;
+  }
+  .datoSnow {
+    padding-top: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 150px;
+    line-height: 150px;
+    width: 12vw;
+  }
+  .beskrivelseFrame {
+    padding-left: 0.5vw;
+    padding-right: 0;
+    width: 42vw;
+    height: 150px;
+    font-size: 2.5vw;
+  }
+  .beskrivelseSnow {
+    padding-top: 0;
+    padding-right: 0.5vw;
+    height: 150px;
+    width: 83vw;
+    margin-right: 1.5vw;
+  }
+  .desk {
+    margin-bottom: 3vh;
+  }
+  /* Buttons right frame */
+  .btn {
+    border-radius: 25px;
+  }
+  .redBtn {
+    font-size: 3.5rem;
+  }
+  .flag {
+    padding: 8px 2px;
+  }
+  .flagImg {
+    width: 5.4rem;
+  }
+  .heart {
+    bottom: 10vh;
+  }
+}
+
 @media (min-width: 1025px) {
-  /* Sections in the yellow wall */
+  .breakTwo {
+    display: none;
+  }
   /* Top and bottom yellow wall graphics  */
   .rail {
     width: 100vw;
-    top: -10px;
+    top: -20px;
   }
   .snowbank {
     width: 100vw;
@@ -1940,6 +2271,9 @@ p {
 }
 
 @media (min-width: 1150px) {
+  .rail {
+    top: -20px;
+  }
   .logos {
     top: 39%;
     -webkit-transform: translateY(-39%);
@@ -1963,20 +2297,31 @@ p {
   }
 }
 
-@media (min-width: 1440px) {
-  /* Sections in the yellow wall */
-  .wrapper {
-    width: 100vw;
+@media (min-width: 1300px) {
+  .logos {
+    top: 32%;
+    -webkit-transform: translateY(-32%);
+            transform: translateY(-32%);
   }
-  .wallLeft {
-    width: 33.33vw;
+  .middle {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
   }
-  .wallMiddle {
-    width: 33.33vw;
+  .frameEvents {
+    top: 53%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
   }
-  .wallRight {
-    width: 33.33vw;
+  .desk {
+    margin-bottom: 2vh;
   }
+  .logoBottom {
+    margin-top: -14vh;
+  }
+}
+
+@media (min-width: 1400px) {
   /* Yellow wall frames */
   .frameLeft,
   .frameMiddle,
