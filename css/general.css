@@ -346,7 +346,8 @@ p {
   color: black;
 }
 
-.redBtn, .blueBtn {
+.redBtn,
+.blueBtn {
   border: none;
   margin: 10px 2px;
   padding: 8px 12px;
@@ -572,16 +573,17 @@ p {
 }
 
 /* customizable snowflake styling */
-.snowflake {
-  color: #fff;
-  font-size: 1em;
-  font-family: Arial;
-  text-shadow: 0 0 1px #000;
-}
-
 @-webkit-keyframes snowflakes-fall {
   0% {
-    top: -10%;
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-fall {
+  0% {
+    top: 0%;
   }
   100% {
     top: 100%;
@@ -591,24 +593,15 @@ p {
 @-webkit-keyframes snowflakes-shake {
   0% {
     -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+            transform: translateX(0px);
   }
   50% {
     -webkit-transform: translateX(80px);
-    transform: translateX(80px);
+            transform: translateX(80px);
   }
   100% {
     -webkit-transform: translateX(0px);
-    transform: translateX(0px);
-  }
-}
-
-@keyframes snowflakes-fall {
-  0% {
-    top: -10%;
-  }
-  100% {
-    top: 100%;
+            transform: translateX(0px);
   }
 }
 
@@ -630,170 +623,201 @@ p {
 .snowflake {
   position: fixed;
   top: -10%;
-  z-index: 9999;
+  z-index: 2;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: default;
   -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+          animation-name: snowflakes-fall, snowflakes-shake;
   -webkit-animation-duration: 6s, 3s;
+          animation-duration: 6s, 3s;
   -webkit-animation-timing-function: linear, ease-in-out;
+          animation-timing-function: linear, ease-in-out;
   -webkit-animation-iteration-count: infinite, infinite;
+          animation-iteration-count: infinite, infinite;
   -webkit-animation-play-state: running, running;
-  animation-name: snowflakes-fall, snowflakes-shake;
-  animation-duration: 6s, 3s;
-  animation-timing-function: linear, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-  animation-play-state: running, running;
+          animation-play-state: running, running;
 }
 
 .snowflake:nth-of-type(0) {
   left: 1%;
   -webkit-animation-delay: 0s, 0s;
-  animation-delay: 0s, 0s;
+          animation-delay: 0s, 0s;
 }
 
 .snowflake:nth-of-type(1) {
   left: 10%;
   -webkit-animation-delay: 1s, 1s;
-  animation-delay: 1s, 1s;
+          animation-delay: 1s, 1s;
 }
 
 .snowflake:nth-of-type(2) {
   left: 20%;
   -webkit-animation-delay: 6s, .5s;
-  animation-delay: 6s, .5s;
+          animation-delay: 6s, .5s;
 }
 
 .snowflake:nth-of-type(3) {
   left: 30%;
   -webkit-animation-delay: 4s, 2s;
-  animation-delay: 4s, 2s;
+          animation-delay: 4s, 2s;
 }
 
 .snowflake:nth-of-type(4) {
   left: 40%;
   -webkit-animation-delay: 2s, 2s;
-  animation-delay: 2s, 2s;
+          animation-delay: 2s, 2s;
 }
 
 .snowflake:nth-of-type(5) {
   left: 50%;
   -webkit-animation-delay: 8s, 3s;
-  animation-delay: 8s, 3s;
+          animation-delay: 8s, 3s;
 }
 
 .snowflake:nth-of-type(6) {
   left: 60%;
   -webkit-animation-delay: 6s, 2s;
-  animation-delay: 6s, 2s;
+          animation-delay: 6s, 2s;
 }
 
 .snowflake:nth-of-type(7) {
   left: 70%;
   -webkit-animation-delay: 2.5s, 1s;
-  animation-delay: 2.5s, 1s;
+          animation-delay: 2.5s, 1s;
 }
 
 .snowflake:nth-of-type(8) {
   left: 80%;
   -webkit-animation-delay: 1s, 0s;
-  animation-delay: 1s, 0s;
+          animation-delay: 1s, 0s;
 }
 
 .snowflake:nth-of-type(9) {
   left: 90%;
   -webkit-animation-delay: 3s, 1.5s;
-  animation-delay: 3s, 1.5s;
+          animation-delay: 3s, 1.5s;
 }
 
 .snowflake:nth-of-type(10) {
   left: 95%;
   -webkit-animation-delay: 2s, 1s;
-  animation-delay: 2s, 1s;
+          animation-delay: 2s, 1s;
 }
 
 .snowflake:nth-of-type(11) {
   left: 15%;
   -webkit-animation-delay: 2.3s, 2.5s;
-  animation-delay: 2.3s, 2.5s;
+          animation-delay: 2.3s, 2.5s;
 }
 
 .snowflake:nth-of-type(12) {
   left: 5%;
   -webkit-animation-delay: 4s, 5s;
-  animation-delay: 4s, 5s;
+          animation-delay: 4s, 5s;
 }
 
 .snowflake:nth-of-type(13) {
   left: 50%;
   -webkit-animation-delay: 3.3s, 4.5s;
-  animation-delay: 3.3s, 4.5s;
+          animation-delay: 3.3s, 4.5s;
 }
 
 .snowflake:nth-of-type(14) {
   left: 80%;
   -webkit-animation-delay: 2.6s, 4.2s;
-  animation-delay: 2.6s, 4.2s;
+          animation-delay: 2.6s, 4.2s;
 }
 
 .snowflake:nth-of-type(15) {
   left: 66%;
   -webkit-animation-delay: 6.2s, 6.1s;
-  animation-delay: 6.2s, 6.1s;
+          animation-delay: 6.2s, 6.1s;
 }
 
 .snowflake:nth-of-type(16) {
   left: 8%;
   -webkit-animation-delay: 7.5s, 6.5s;
-  animation-delay: 7.5s, 6.5s;
+          animation-delay: 7.5s, 6.5s;
 }
 
 .snowflake:nth-of-type(17) {
   left: 2%;
   -webkit-animation-delay: 9s, 7.2s;
-  animation-delay: 9s, 7.2s;
+          animation-delay: 9s, 7.2s;
 }
 
 .snowflake:nth-of-type(18) {
   left: 40%;
   -webkit-animation-delay: 8.5s, 7.7s;
-  animation-delay: 8.5s, 7.7s;
+          animation-delay: 8.5s, 7.7s;
 }
 
 .snowflake:nth-of-type(19) {
   left: 88%;
   -webkit-animation-delay: 8.1s, 4.2s;
-  animation-delay: 8.1s, 4.2s;
+          animation-delay: 8.1s, 4.2s;
 }
 
 .snowflake:nth-of-type(20) {
   left: 83%;
   -webkit-animation-delay: 6.8s, 5.1s;
-  animation-delay: 6.8s, 5.1s;
+          animation-delay: 6.8s, 5.1s;
 }
 
 .snowflake:nth-of-type(21) {
   left: 23.6%;
   -webkit-animation-delay: 3.3s, 5.2s;
-  animation-delay: 3.3s, 5.2s;
+          animation-delay: 3.3s, 5.2s;
 }
 
 .snowflake:nth-of-type(22) {
   left: 82.6%;
   -webkit-animation-delay: 2.5s, 8.1s;
-  animation-delay: 2.5s, 8.1s;
+          animation-delay: 2.5s, 8.1s;
 }
 
-.en {
-  font-size: 116%;
+/* Section dot links */
+.dots {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2vh;
+  text-align: center;
+}
+
+.dots > a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #CAD4E8;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin: 0 4vw 0 4vw;
+  position: relative;
+  outline: none;
+}
+
+.dots > a:active {
+  background: #A7292E;
+}
+
+.dots > a:focus {
+  background: #A7292E;
 }
 
 @media (min-width: 300px) {
-  .rail {
-    top: -20px;
-  }
   .logos {
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -816,12 +840,6 @@ p {
   /* Event box's right frame */
   .break {
     display: none;
-  }
-  .frameEvents {
-    position: absolute;
-    top: 60%;
-    -webkit-transform: translateY(-60%);
-            transform: translateY(-60%);
   }
   .eventFrame {
     margin-bottom: 1vh;
@@ -863,9 +881,6 @@ p {
   .logoBottom {
     margin-top: -13vh;
   }
-  .rail {
-    top: -20px;
-  }
   .middle {
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -882,9 +897,6 @@ p {
 }
 
 @media (min-width: 340px) {
-  .rail {
-    top: -20px;
-  }
   .logos {
     top: 46%;
     -webkit-transform: translateY(-46%);
@@ -920,9 +932,6 @@ p {
   }
   .logoBottom {
     margin-top: -13vh;
-  }
-  .rail {
-    top: -20px;
   }
   .middle {
     top: 50%;
@@ -1235,9 +1244,6 @@ p {
     right: 14vw;
     left: 14vw;
   }
-  .rail {
-    top: -20px;
-  }
   .frameLeft,
   .frameMiddle,
   .frameRight {
@@ -1285,7 +1291,6 @@ p {
     display: none;
   }
   .frameEvents {
-    position: absolute;
     top: 53%;
     -webkit-transform: translateY(-53%);
             transform: translateY(-53%);
@@ -1757,7 +1762,7 @@ p {
     left: 14vw;
   }
   .rail {
-    top: -50px;
+    top: -30px;
   }
   .frameLeft,
   .frameMiddle,
@@ -1804,12 +1809,6 @@ p {
   /* Event box's right frame */
   .break {
     display: none;
-  }
-  .frameEvents {
-    position: absolute;
-    top: 53%;
-    -webkit-transform: translateY(-53%);
-            transform: translateY(-53%);
   }
   .eventFrame {
     margin-bottom: 1vh;
@@ -2071,6 +2070,7 @@ p {
   .rail {
     top: -20px;
     width: 300vw;
+    margin-top: -20px;
   }
   .snowbank {
     width: 300vw;
@@ -2082,9 +2082,6 @@ p {
     width: 71%;
     right: 14vw;
     left: 14vw;
-  }
-  .rail {
-    margin-top: -20px;
   }
   .frameLeft,
   .frameMiddle,
@@ -2186,13 +2183,15 @@ p {
 }
 
 @media (min-width: 1025px) {
+  .dots {
+    display: none;
+  }
   .breakTwo {
     display: none;
   }
   /* Top and bottom yellow wall graphics  */
   .rail {
     width: 100vw;
-    top: -20px;
   }
   .snowbank {
     width: 100vw;
@@ -2302,6 +2301,9 @@ p {
   .flag {
     padding: 8px 5px;
   }
+  .en {
+    font-size: 116%;
+  }
   .flagImg {
     width: 2.45rem;
   }
@@ -2357,9 +2359,6 @@ p {
 }
 
 @media (min-width: 1150px) {
-  .rail {
-    top: -20px;
-  }
   .logos {
     top: 39%;
     -webkit-transform: translateY(-39%);
@@ -2432,12 +2431,6 @@ p {
     left: -11.9vw;
   }
   /* Top and bottom yellow wall graphics  */
-  .rail {
-    position: absolute;
-    top: -20px;
-    width: 100vw;
-    z-index: 1;
-  }
   .snowbank {
     width: 100vw;
     display: block;
